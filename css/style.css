@@ -98,6 +98,7 @@ a.skip:focus{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -182,6 +183,16 @@ footer{
   .gallery, #gallery{
     display: none;
   }
+  .nav_links{
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  nav{
+    width: 100%;
+    justify-content: space-evenly; 
+  }
   .card{
     flex-basis: 250px;
     border: 2px solid #45ADAD;
@@ -193,10 +204,11 @@ footer{
   .card ul li:nth-child(odd):before{
     content: '\1F44D';
   }
-
+  
 }
 
 @media screen and (min-width: 850px){
+
   .card_big{
       -webkit-transform: scaleY(1.1);
       transform: scaleY(1.1);
