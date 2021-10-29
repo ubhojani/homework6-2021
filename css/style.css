@@ -1,41 +1,15 @@
-html{
-    scroll-behavior: smooth;
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16pt; /* test for this! Make all sizes em or rem */
 }
 
 header{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: static;
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
 }
 
-a:link, a:visited {
-    color: #0000EE;
-}
-body{
-  font-family: 'Alegreya Sans SC', serif;
-  background-image: url("../images/concrete_seamless.png");
-  background-color: #f1f1f1
-}
-
-body > header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  width: 100%;
-  top: 0;
-  background-color: #f1f1f1
-}
-
-body > header img {
-  animation-name: logoanimation;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-
-}
-h1 {
+h1{
   font-size: 2em;
   text-align: center;
   line-height: 2;
@@ -49,10 +23,6 @@ h2{
 
 p {
   padding: 0 30px;
-}
-
-a { 
-  color: blue;
 }
 
 a.skip{
@@ -76,11 +46,6 @@ a.skip:focus{
   border: 2px solid black;
 }
 
-.nav_links {
-  display: flex;
-  flex-direction: column;
-  /* width: 100% */
-}
 
 .nav_item a{
   padding: 10px;
@@ -95,10 +60,6 @@ a.skip:focus{
 
 .pricing{
   min-height: 475px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .card {
@@ -106,20 +67,7 @@ a.skip:focus{
   background: #fff;
   border-radius: 7px;
   padding: 0 0 25px 0;
-  flex-basis: 450px;
 
-}
-
-.card{
-    flex-basis: 250px;
-}
-
-.card > header{
-  background: #288088;
-  border: 2px solid #45ADAD;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 7px 7px 0px 0px;
 }
 
 .card > ul{
@@ -130,7 +78,7 @@ a.skip:focus{
 .card > ul li {
   width: 90%;
   margin: 20px auto;
-  
+
 }
 
 .card button{
@@ -155,21 +103,8 @@ a.skip:focus{
           transform: initial;
 }
 
-.card{
-    flex-basis: 250px;
-}
-
 .gallery{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-}
-
-.gallery > img{
-  border: 10px solid #50C7C7;
-  margin: 10px;
-  width: 300px;
+  min-height: 600px;
 }
 
 footer{
@@ -179,78 +114,10 @@ footer{
   text-align: center;
 }
 
-@media print {
-  
-  header {
-    display: flex;
-    flex-direction: column;
-  }
-  .gallery, #gallery{
-    display: none;
-  }
-  .nav_links{
-    display: flex; 
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  nav{
-    width: 100%;
-    justify-content: space-evenly; 
-  }
-  .card{
-    flex-basis: 250px;
-    border: 2px solid #45ADAD;
-  }
-  .card ul li:nth-child(even):after{
-    content: '\1F44D';
-  }
-
-  .card ul li:nth-child(odd):before{
-    content: '\1F44D';
-  }
-  
-  .pricing {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: flex-end;
-  }
-
-  body {
-    background-image: none;
-    background-color: #ffffff; 
-  }
-}
-
 @media screen and (min-width: 850px){
-
   .card_big{
       -webkit-transform: scaleY(1.1);
       transform: scaleY(1.1);
       z-index: -99;
 }
-
-.nav_links {
-  flex-direction: row;
 }
-
-.top-header {
-  flex-direction: row;
-  justify-content: space-between;
-  position:fixed;
-  width: 100%;
-}
-}
-
-
-
-@keyframes grow {
-    from {
-        width: 50px;
-        opacity: 0;
-    }
-    to {
-        width: 425px;
-        opacity: 1;
-      }
-    }
