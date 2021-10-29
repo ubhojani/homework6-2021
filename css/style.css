@@ -6,14 +6,14 @@ header{
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-bottom: 3px solid #50C7C7;
+  position: static;
 }
 
 a:link, a:visited {
     color: #0000EE;
 }
 body{
-  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Alegreya Sans SC', serif;
   background-image: url("../images/concrete_seamless.png");
   background-color: #f1f1f1
 }
@@ -162,6 +162,7 @@ a.skip:focus{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    
 }
 
 .gallery > img{
@@ -177,13 +178,37 @@ footer{
   text-align: center;
 }
 
+@media print {
+  .gallery, #gallery{
+    display: none;
+  }
+  .card{
+    flex-basis: 250px;
+    border: 2px solid #45ADAD;
+  }
+  .card ul li:nth-child(even):after{
+    content: '\1F44D';
+  }
+
+  .card ul li:nth-child(odd):before{
+    content: '\1F44D';
+  }
+
+}
+
 @media screen and (min-width: 850px){
   .card_big{
       -webkit-transform: scaleY(1.1);
       transform: scaleY(1.1);
       z-index: -99;
 }
+
+.nav_links {
+  flex-direction: row;
 }
+}
+
+
 
 @keyframes grow {
     from {
