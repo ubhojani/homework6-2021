@@ -180,6 +180,11 @@ footer{
 }
 
 @media print {
+  
+  header {
+    display: flex;
+    flex-direction: column;
+  }
   .gallery, #gallery{
     display: none;
   }
@@ -205,6 +210,16 @@ footer{
     content: '\1F44D';
   }
   
+  .pricing {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  body {
+    background-image: none;
+    background-color: #ffffff; 
+  }
 }
 
 @media screen and (min-width: 850px){
@@ -217,6 +232,13 @@ footer{
 
 .nav_links {
   flex-direction: row;
+}
+
+.top-header {
+  flex-direction: row;
+  justify-content: space-between;
+  position:fixed;
+  width: 100%;
 }
 }
 
